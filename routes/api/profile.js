@@ -102,7 +102,6 @@ router.post(
     }
 
     console.log(profileFields.social.twitter);
-    res.send('Hello');
   }
 );
 
