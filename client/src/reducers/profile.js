@@ -5,6 +5,7 @@ import {
   CLEAR_PROFILE,
   UPDATE_PROFILE,
   GET_REPOS,
+  NO_GITHUB_PROFILE,
 } from '../actions/types';
 
 const initialState = {
@@ -51,6 +52,12 @@ export default function (state = initialState, action) {
       return {
         ...state,
         repos: payload,
+        loading: false,
+      };
+    case NO_GITHUB_PROFILE:
+      return {
+        ...state,
+        error: payload,
         loading: false,
       };
     default:
